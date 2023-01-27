@@ -1,7 +1,7 @@
-const button = document.getElementById("button");
-const input = document.getElementById("input");
-const form = document.getElementById("form");
-const table = document.getElementById("table") 
+const button = document.getElementById("subBtn");
+const input = document.getElementById("multiplierInput");
+const form = document.getElementById("multiplierForm");
+const table = document.getElementById("tabuadaTable") 
 
 let number = "";
 
@@ -11,7 +11,14 @@ form.addEventListener("submit",(e)=>{
 
 button.addEventListener("click",()=>{
     number = input.value; 
-    console.log(number);
+    table.innerHTML = null;
+    const defTr= document.createElement("tr");
+    const defTh1 = document.createElement("th");
+    const defTh2 = document.createElement("th");
+    const defTh3 = document.createElement("th");
+    defTh1.innerHTML = "Multiplicador";
+    defTh2.innerHTML = "Multiplicando";
+    defTh3.innerHTML = "Resultado"
 
     for (let i = 0; i < 11; i++) {
         const tr = document.createElement("tr");
